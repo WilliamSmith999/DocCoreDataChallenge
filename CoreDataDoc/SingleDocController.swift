@@ -8,7 +8,11 @@
 
 import UIKit
 
-class SingleDocController: UIViewController {
+class ViewController: UIViewController {
+    
+    override func setToolbarItems(_ toolbarItems: [UIBarButtonItem]?, animated: Bool) {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

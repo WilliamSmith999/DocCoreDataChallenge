@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QPq-bB-6Ea">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,20 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreDataDoc" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
         <!--Table View Controller-->
         <scene sceneID="uIK-iU-MVt">
             <objects>
@@ -49,7 +35,56 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GVJ-FJ-8M9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888" y="133"/>
+            <point key="canvasLocation" x="745" y="27"/>
+        </scene>
+        <!--Single Doc Controller-->
+        <scene sceneID="8oo-Te-mcr">
+            <objects>
+                <viewController id="h7E-xj-nM7" customClass="SingleDocController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0hv-tm-Sxd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8fv-Sl-Y0e">
+                                <rect key="frame" x="74" y="57" width="285" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZtA-Ft-LNZ">
+                                <rect key="frame" x="16" y="56" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iFE-pw-8X1">
+                                <rect key="frame" x="16" y="123" width="343" height="528"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f8H-On-lzQ" firstAttribute="bottom" secondItem="iFE-pw-8X1" secondAttribute="bottom" constant="16" id="D5T-zK-tuX"/>
+                            <constraint firstItem="f8H-On-lzQ" firstAttribute="trailing" secondItem="iFE-pw-8X1" secondAttribute="trailing" constant="16" id="E7x-7G-FSr"/>
+                            <constraint firstItem="iFE-pw-8X1" firstAttribute="top" secondItem="ZtA-Ft-LNZ" secondAttribute="bottom" constant="46" id="KvP-yJ-za9"/>
+                            <constraint firstItem="ZtA-Ft-LNZ" firstAttribute="leading" secondItem="f8H-On-lzQ" secondAttribute="leading" constant="16" id="U6U-Lv-x78"/>
+                            <constraint firstItem="8fv-Sl-Y0e" firstAttribute="leading" secondItem="ZtA-Ft-LNZ" secondAttribute="trailing" constant="8" id="Vm6-Uq-E5y"/>
+                            <constraint firstItem="8fv-Sl-Y0e" firstAttribute="top" secondItem="f8H-On-lzQ" secondAttribute="top" constant="37" id="XOC-wb-QPY"/>
+                            <constraint firstItem="ZtA-Ft-LNZ" firstAttribute="top" secondItem="f8H-On-lzQ" secondAttribute="top" constant="36" id="g9K-8t-cpE"/>
+                            <constraint firstItem="iFE-pw-8X1" firstAttribute="top" secondItem="8fv-Sl-Y0e" secondAttribute="bottom" constant="36" id="gkV-F0-lSm"/>
+                            <constraint firstItem="iFE-pw-8X1" firstAttribute="leading" secondItem="f8H-On-lzQ" secondAttribute="leading" constant="16" id="j80-IP-gyG"/>
+                            <constraint firstItem="f8H-On-lzQ" firstAttribute="trailing" secondItem="8fv-Sl-Y0e" secondAttribute="trailing" constant="16" id="wru-PU-GWx"/>
+                            <constraint firstItem="8fv-Sl-Y0e" firstAttribute="leading" secondItem="ZtA-Ft-LNZ" secondAttribute="trailing" constant="8" id="zRN-xG-J6j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f8H-On-lzQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DFY-II-qor" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1396" y="27"/>
         </scene>
     </scenes>
 </document>

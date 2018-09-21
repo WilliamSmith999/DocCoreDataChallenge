@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SingleDocController.swift
 //  CoreDataDoc
 //
 //  Created by William Smith on 9/21/18.
@@ -8,15 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    
+class SingleDocController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    
+    
 }
-

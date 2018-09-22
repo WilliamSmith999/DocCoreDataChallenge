@@ -7,33 +7,32 @@
 //
 
 import UIKit
+import CoreData
 
-class SingleDocController: UIViewController {
-
-    @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var contentField: UITextView!
+class viewController: UIViewController {
     
+    var documents = [Document]()
+    @IBOutlet var docTables: UITableView!
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchResquest: NSFetchRequest<Document> = Document.fetchRequest()
+        do{
+            documents = try managedContext.fetch(fetchResquest)
+            docTables.reloadData()
+        }catch{
+            print("fetch failed")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    @IBAction func saveDoc(_ sender: Any){
-        let name = nameField.text
-        let content = contentField.text
-        let date = Date.init()
-        
-        if let document = Document.init(name: name, date: date, content: content ?? ""){
-            do{
-                let managedContent = document.managedObjectContext
-                try managedContent?.save()
-                self.navigationController?.popViewController(animated: true)
-            }catch{
-                print("failed")
-                
-            }
-        }
-    }
-
+    
 }
 

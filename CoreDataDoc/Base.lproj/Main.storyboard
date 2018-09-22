@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Veiw Controller-->
+        <!--View Controller-->
         <scene sceneID="uIK-iU-MVt">
             <objects>
-                <tableViewController id="QPq-bB-6Ea" customClass="VeiwController" sceneMemberID="viewController">
+                <tableViewController id="QPq-bB-6Ea" customClass="viewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="u8d-iK-HlT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,15 +32,18 @@
                             <outlet property="delegate" destination="QPq-bB-6Ea" id="MHC-xa-qOV"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="docTables" destination="u8d-iK-HlT" id="euK-C3-sLb"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GVJ-FJ-8M9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="745" y="27"/>
         </scene>
-        <!--Single Doc Controller-->
+        <!--Doc Controller-->
         <scene sceneID="8oo-Te-mcr">
             <objects>
-                <viewController id="h7E-xj-nM7" customClass="SingleDocController" sceneMemberID="viewController">
+                <viewController id="h7E-xj-nM7" customClass="DocController" customModule="CoreDataDoc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0hv-tm-Sxd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,7 +86,8 @@
                     </view>
                     <connections>
                         <outlet property="content" destination="iFE-pw-8X1" id="Cta-W0-4pe"/>
-                        <outlet property="name" destination="8fv-Sl-Y0e" id="MT7-lf-YXf"/>
+                        <outlet property="contentField" destination="iFE-pw-8X1" id="cNd-3g-mei"/>
+                        <outlet property="name" destination="8fv-Sl-Y0e" id="2kN-tz-lmq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DFY-II-qor" userLabel="First Responder" sceneMemberID="firstResponder"/>
